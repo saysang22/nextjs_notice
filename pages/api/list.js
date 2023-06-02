@@ -5,5 +5,4 @@ export default async function handler(요청, 응답) {
   const db = client.db("forum");
   const result = await db.collection("post").find().toArray();
   응답.status(200).json(result);
-  console.log(result);
 }

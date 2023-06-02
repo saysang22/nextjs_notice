@@ -6,6 +6,21 @@ a {
   text-decoration: none;
 }
 
+nav ul {
+  display: flex;
+  /* margin: 0; */
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin-left: 2rem;
+}
+
+li:first-child {
+  margin-left: 1rem;
+}
+
 .list-bg {
   background: rgb(249, 250, 255);
   padding: 10px;
@@ -16,6 +31,8 @@ a {
   padding: 20px;
   margin-bottom: 5px;
   box-shadow: rgb(224, 224, 224) 0px 2px 4px 0px;
+  opacity: 1;
+  transition: all 1s;
 }
 
 .list-item h4 {
@@ -31,6 +48,14 @@ a {
 .list-inner {
   display: flex;
   justify-content: space-between;
+}
+
+.edit-wrap {
+  width: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
 }
 
 .p-20 {

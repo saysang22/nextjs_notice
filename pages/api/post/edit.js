@@ -1,9 +1,9 @@
+//@/pages/api/post/deit.js
 import { connectDB } from "@/utill/database";
 import { ObjectId } from "mongodb";
 
 export default async function handler(요청, 응답) {
   if (요청.method === "POST") {
-    console.log(요청.body);
     let upDateData = {
       title: 요청.body.title,
       content: 요청.body.content,

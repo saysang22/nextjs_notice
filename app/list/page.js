@@ -1,6 +1,6 @@
 //list/page.js
 import { connectDB } from "@/utill/database";
-import Link from "next/link";
+import ListClient from "./ListClient";
 
 export default async function List() {
   const client = await connectDB;
@@ -9,19 +9,7 @@ export default async function List() {
 
   return (
     <div className="list-bg">
-      {result.map((list) => {
-        return (
-          <div className="list-item" key={list._id}>
-            <div className="list-inner">
-              <Link href={`/detail/${list._id}`}>
-                <h4>{list.title}</h4>
-              </Link>
-              <Link href={`/edit/${list._id}`}>수정</Link>
-            </div>
-            <p>{list.content}</p>
-          </div>
-        );
-      })}
+      <ListClient result={result} />
     </div>
   );
 }
