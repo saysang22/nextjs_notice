@@ -2,7 +2,7 @@
 import { connectDB } from "@/utill/database";
 import ListClient from "./ListClient";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 20;
 
 export default async function List() {
   const client = await connectDB;

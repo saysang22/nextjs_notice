@@ -10,11 +10,14 @@ nav ul {
   display: flex;
   /* margin: 0; */
   padding: 0;
+  align-items: center;
 }
 
 li {
   list-style: none;
   margin-left: 2rem;
+  display: flex;
+  align-items: center;
 }
 
 li:first-child {
