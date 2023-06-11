@@ -2,7 +2,7 @@
 "use client";
 import Link from "next/link";
 
-export default function ListClient({ result }) {
+export default function ListClient({ result, session }) {
   const deleteHandler = (listId, e) => {
     fetch("/api/post/delete", {
       method: "POST",
@@ -13,10 +13,15 @@ export default function ListClient({ result }) {
       })
       .then((a) => {
         alert(a);
-        e.target.closest(".list-item").style.opacity = 0;
-        setTimeout(() => {
-          e.target.closest(".list-item").style.display = "none";
-        }, 500);
+        let email = result.filter((email) => {
+          return email._id === listId;
+        });
+        if (session && email[0].author === session.user.email) {
+          e.target.closest(".list-item").style.opacity = 0;
+          setTimeout(() => {
+            e.target.closest(".list-item").style.display = "none";
+          }, 500);
+        }
       })
       .catch((error) => {
         console.log(error);

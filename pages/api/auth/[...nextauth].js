@@ -1,6 +1,7 @@
+import { connectDB } from "@/utill/database";
+import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
 import NextAuth from "next-auth";
 import GithubProvider from "next-auth/providers/github";
-import GoogleProvider from "next-auth/providers/google";
 
 export const authOptions = {
   providers: [
@@ -9,6 +10,7 @@ export const authOptions = {
       clientSecret: "3c7054647a9c541c3d9748b6721f5e4403dbb32d",
     }),
   ],
-  secret: "060clf",
+  secret: "qwer1234",
+  adapter: MongoDBAdapter(connectDB),
 };
 export default NextAuth(authOptions);
