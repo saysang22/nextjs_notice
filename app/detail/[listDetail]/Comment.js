@@ -1,3 +1,4 @@
+//app/detail/[listDetail]/Comment.js
 "use client";
 
 import { useEffect, useState } from "react";
@@ -5,7 +6,6 @@ import { useEffect, useState } from "react";
 export default function Comment(props) {
   let [comment, setComment] = useState("");
   let [view, setView] = useState([]);
-  console.log(view);
 
   const fetchHandler = () => {
     fetch(`/api/comment/list?id=${props._id}`)

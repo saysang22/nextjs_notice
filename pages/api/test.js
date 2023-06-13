@@ -1,6 +1,5 @@
 //@/pages/api/test.js
 export default function handler(req, res) {
-  console.log(req.query);
   // if (요청.method === "POST") {
   //   console.log("서버테스트ㅋㅋ", 요청.method, 요청.body);
   // }

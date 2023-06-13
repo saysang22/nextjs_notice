@@ -5,7 +5,6 @@ import { ObjectId } from "mongodb";
 
 export default async function handler(req, res) {
   let session = await getServerSession(req, res, authOptions);
-  console.log(session);
   if (req.method === "POST") {
     req.body = JSON.parse(req.body);
     let saveDb = {

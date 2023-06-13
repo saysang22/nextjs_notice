@@ -8,8 +8,8 @@ a {
 
 nav ul {
   display: flex;
-  /* margin: 0; */
-  padding: 0;
+  margin: 0;
+  padding: 1rem 0;
   align-items: center;
 }
 
@@ -82,4 +82,19 @@ button {
   justify-content: space-between;
   padding: 1rem;
   border-bottom: 1px solid lightgray;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-mode .navbar {
+  background-color: #222;
+  color: #fff;
+}
+
+.dark-mode .navbar a {
+  color: #fff;
 }
